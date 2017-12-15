@@ -54,6 +54,21 @@ public class InstrumentTest {
     }
 
     @Test
+    public void canPlayGuitar(){
+        assertEquals("wowowowowowowowowoweeeeeeeee", guitar.play());
+    }
+
+    @Test
+    public void canPlayDrums(){
+        assertEquals("bang bang bang", drumKit.play());
+    }
+
+    @Test
+    public void canPlayKeyboard(){
+        assertEquals("plink plank plonk", keyBoard.play());
+    }
+
+    @Test
     public void getTotalBuyPrice(){
         assertEquals(205, guitar.getBuyPrice(), 0.1);
     }

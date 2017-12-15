@@ -3,7 +3,7 @@ package Instruments;
 import MiscItems.GuitarString;
 import Shop.ISell;
 
-public class Guitar extends Instrument implements ISell {
+public class Guitar extends Instrument implements ISell, IPlay {
 
 
     private int numberOfStrings;
@@ -67,5 +67,9 @@ public class Guitar extends Instrument implements ISell {
 
     public double getSellPrice(){
         return sellPrice += guitarString.getSellPrice();
+    }
+
+    public String play() {
+        return "wowowowowowowowowoweeeeeeeee" ;
     }
 }

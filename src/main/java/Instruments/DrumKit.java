@@ -6,7 +6,7 @@ import Shop.ISell;
 
 import java.util.ArrayList;
 
-public class DrumKit extends Instrument implements ISell{
+public class DrumKit extends Instrument implements ISell, IPlay{
 
     private ArrayList<IDrum> drums;
     private DrumStick drumStick;
@@ -64,4 +64,7 @@ public class DrumKit extends Instrument implements ISell{
     }
 
 
+    public String play() {
+        return "bang bang bang";
+    }
 }

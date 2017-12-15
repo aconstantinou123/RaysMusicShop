@@ -2,7 +2,7 @@ package Instruments;
 
 import Shop.ISell;
 
-public class KeyBoard extends Instrument implements ISell{
+public class KeyBoard extends Instrument implements ISell, IPlay{
 
     private int numberOfKeys;
     private double buyPrice;
@@ -41,5 +41,9 @@ public class KeyBoard extends Instrument implements ISell{
 
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public String play() {
+        return "plink plank plonk";
     }
 }

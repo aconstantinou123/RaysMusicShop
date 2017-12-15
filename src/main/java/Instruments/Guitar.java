@@ -1,8 +1,9 @@
 package Instruments;
 
 import MiscItems.GuitarString;
+import Shop.ISell;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements ISell {
 
 
     private int numberOfStrings;
@@ -20,6 +21,10 @@ public class Guitar extends Instrument {
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
         this.guitarString = guitarString;
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBuyPrice();
     }
 
     public int getNumberOfStrings() {

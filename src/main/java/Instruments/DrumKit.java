@@ -2,10 +2,11 @@ package Instruments;
 
 import Drums.IDrum;
 import MiscItems.DrumStick;
+import Shop.ISell;
 
 import java.util.ArrayList;
 
-public class DrumKit extends Instrument{
+public class DrumKit extends Instrument implements ISell{
 
     private ArrayList<IDrum> drums;
     private DrumStick drumStick;
@@ -14,6 +15,10 @@ public class DrumKit extends Instrument{
         super(name, material, colour, type, make, model);
         this.drums = new ArrayList<>();
         this.drumStick = drumStick;
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBuyPrice();
     }
 
     public ArrayList<IDrum> getDrums() {

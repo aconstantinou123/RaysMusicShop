@@ -1,6 +1,8 @@
 package Drums;
 
-public class TomTomDrum implements IDrum{
+import Shop.ISell;
+
+public class TomTomDrum implements IDrum, ISell{
 
     private String name;
     private double buyPrice;
@@ -10,6 +12,10 @@ public class TomTomDrum implements IDrum{
         this.name = name;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellPrice - buyPrice;
     }
 
     public double getBuyPrice() {

@@ -1,6 +1,8 @@
 package Instruments;
 
-public class KeyBoard extends Instrument {
+import Shop.ISell;
+
+public class KeyBoard extends Instrument implements ISell{
 
     private int numberOfKeys;
     private double buyPrice;
@@ -11,6 +13,10 @@ public class KeyBoard extends Instrument {
         this.numberOfKeys = numberOfKeys;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellPrice - buyPrice;
     }
 
     public int getNumberOfKeys() {

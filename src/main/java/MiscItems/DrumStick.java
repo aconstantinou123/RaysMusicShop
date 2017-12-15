@@ -1,6 +1,8 @@
 package MiscItems;
 
-public class DrumStick {
+import Shop.ISell;
+
+public class DrumStick implements ISell {
 
     private String name;
     private double buyPrice;
@@ -10,6 +12,10 @@ public class DrumStick {
         this.name = name;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellPrice - buyPrice;
     }
 
     public double getBuyPrice() {

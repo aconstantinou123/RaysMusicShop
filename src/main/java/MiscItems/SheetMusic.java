@@ -1,6 +1,8 @@
 package MiscItems;
 
-public class SheetMusic {
+import Shop.ISell;
+
+public class SheetMusic implements ISell {
 
     private String name;
     private double buyPrice;
@@ -10,6 +12,10 @@ public class SheetMusic {
         this.name = name;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellPrice - buyPrice;
     }
 
     public double getBuyPrice() {

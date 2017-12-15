@@ -183,5 +183,40 @@ public class ShopTest {
         assertEquals("Sheet Music", shop.listItemsByClass(SheetMusic.class));
         assertEquals("Red Roland ty6788 Keyboard\n" +
                 "Black Steinway X$6788 Keyboard", shop.listItemsByClass(KeyBoard.class));
+        assertEquals("Bass Drum", shop.listItemsByClass(BassDrum.class));
     }
+
+    @Test
+    public void canSearchByName() {
+        shop.addStock(keyBoard);
+        shop.addStock(keyBoard2);
+        shop.addStock(guitar);
+        assertEquals("Keyboard: 2", shop.searchByProductName("Keyboard"));
+        assertEquals("Guitar: 1", shop.searchByProductName("Guitar"));
+    }
+
+    @Test
+    public void canDislayStock() {
+        shop.addStock(guitar);
+        shop.addStock(drumKit);
+        shop.addStock(keyBoard);
+        shop.addStock(keyBoard2);
+        shop.addStock(bassDrum2);
+        shop.addStock(snare2);
+        shop.addStock(snare);
+        shop.addStock(tomTomDrum2);
+        shop.addStock(tomTomDrum);
+        shop.addStock(cymbal2);
+        shop.addStock(sheetMusic);
+        assertEquals("Guitar: 1\n" +
+                "Drum Kit: 1\n" +
+                "Keyboard: 2\n" +
+                "Bass Drum: 1\n" +
+                "Snare: 2\n" +
+                "Tom Tom Drum: 2\n" +
+                "Cymbal: 1\n" +
+                "Sheet Music: 1", shop.displayStock());
+    }
+
+
 }

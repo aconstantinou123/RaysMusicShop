@@ -14,6 +14,10 @@ public class DrumStick implements ISell {
         this.sellPrice = sellPrice;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double calculateMarkup() {
         return sellPrice - buyPrice;
     }

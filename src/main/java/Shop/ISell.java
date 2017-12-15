@@ -9,4 +9,6 @@ public interface ISell {
     public double getSellPrice();
 
     public String prettyName();
+
+    public String getName();
 }

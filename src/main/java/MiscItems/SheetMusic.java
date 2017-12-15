@@ -14,6 +14,10 @@ public class SheetMusic implements ISell {
         this.sellPrice = sellPrice;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double calculateMarkup() {
         return sellPrice - buyPrice;
     }

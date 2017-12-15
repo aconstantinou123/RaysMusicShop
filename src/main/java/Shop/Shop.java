@@ -84,4 +84,31 @@ public class Shop {
         return result;
     }
 
+    public String searchByProductName(String itemName){
+        ArrayList<ISell> foundInstrument = new ArrayList<>();
+        for (ISell item : stock){
+            if (itemName.equals(item.getName()) && !foundInstrument.contains(item.getName())){
+                foundInstrument.add(item);
+            }
+        }
+        String result = String.format("%s: %s", itemName, foundInstrument.size());
+        return result;
+    }
+
+    public String displayStock(){
+        ArrayList<String> allStock = new ArrayList<>();
+        ArrayList<String> allStockUnique = new ArrayList<>();
+        for (ISell item : stock) {
+                allStock.add(searchByProductName(item.getName()));
+                for (String displayStock : allStock){
+                    if(!allStockUnique.contains(displayStock)){
+                        allStockUnique.add(displayStock);
+                    }
+                }
+        }
+        String result = String.join("\n", allStockUnique);
+        return result;
+    }
+
+
 }

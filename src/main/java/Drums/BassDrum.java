@@ -33,6 +33,7 @@ public class BassDrum implements IDrum, ISell {
         return name;
     }
 
+
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
     }

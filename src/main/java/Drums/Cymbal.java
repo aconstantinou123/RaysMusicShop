@@ -34,6 +34,10 @@ public class Cymbal implements IDrum, ISell{
         return name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
     }

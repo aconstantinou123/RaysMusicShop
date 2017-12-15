@@ -1,6 +1,6 @@
 package Drums;
 
-public class Snare {
+public class Snare implements IDrum{
 
     private double buyPrice;
     private double sellPrice;

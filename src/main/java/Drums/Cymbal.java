@@ -1,6 +1,6 @@
 package Drums;
 
-public class Cymbal {
+public class Cymbal implements IDrum{
 
     private double buyPrice;
     private double sellPrice;

@@ -1,11 +1,11 @@
-package Drums;
+package MiscItems;
 
-public class BassDrum implements IDrum {
+public class GuitarString {
 
     private double buyPrice;
     private double sellPrice;
 
-    public BassDrum(double buyPrice, double sellPrice) {
+    public GuitarString(double buyPrice, double sellPrice) {
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }

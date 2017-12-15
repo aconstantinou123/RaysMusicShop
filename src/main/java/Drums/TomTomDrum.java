@@ -1,6 +1,6 @@
 package Drums;
 
-public class TomTomDrum {
+public class TomTomDrum implements IDrum{
 
     private double buyPrice;
     private double sellPrice;

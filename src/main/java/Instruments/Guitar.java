@@ -1,5 +1,7 @@
 package Instruments;
 
+import MiscItems.GuitarString;
+
 public class Guitar extends Instrument {
 
 
@@ -7,15 +9,17 @@ public class Guitar extends Instrument {
     private boolean isElectric;
     private double buyPrice;
     private double sellPrice;
+    private GuitarString guitarString;
 
     public Guitar(String material, Colour colour, Type type, Make make, String model,
-                  int numberOfStrings, boolean isElectric, double buyPrice, double sellPrice) {
+                  int numberOfStrings, boolean isElectric, double buyPrice, double sellPrice, GuitarString guitarString) {
         super(material, colour, type, make, model);
 
         this.numberOfStrings = numberOfStrings;
         this.isElectric = isElectric;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
+        this.guitarString = guitarString;
     }
 
     public int getNumberOfStrings() {
@@ -34,19 +38,29 @@ public class Guitar extends Instrument {
         isElectric = electric;
     }
 
-    public double getBuyPrice() {
-        return buyPrice;
-    }
 
     public void setBuyPrice(double buyPrice) {
         this.buyPrice = buyPrice;
     }
 
-    public double getSellPrice() {
-        return sellPrice;
-    }
 
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public GuitarString getGuitarString() {
+        return guitarString;
+    }
+
+    public void setGuitarString(GuitarString guitarString) {
+        this.guitarString = guitarString;
+    }
+
+    public double getBuyPrice(){
+        return buyPrice += guitarString.getBuyPrice();
+    }
+
+    public double getSellPrice(){
+        return sellPrice += guitarString.getSellPrice();
     }
 }

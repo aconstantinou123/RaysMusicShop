@@ -110,7 +110,11 @@ public class Shop {
         return result;
     }
 
-//    public void applySalePrices(double ){}
+    public void applySalePrices(double percent){
+        for (ISell items : stock){
+            items.adjustSellPrice(percent);
+        }
+    }
 
 
 }

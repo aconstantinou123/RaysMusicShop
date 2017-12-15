@@ -110,6 +110,17 @@ public class ShopTest {
     }
 
     @Test
+    public void canAdjustAllPrices() {
+        shop.addStock(guitar);
+        shop.addStock(drumKit);
+        shop.addStock(keyBoard);
+        shop.applySalePrices(50);
+        assertEquals(155, guitar.getSellPrice(), 0.1);
+        assertEquals(310, drumKit.getSellPrice(), 0.1);
+        assertEquals(150, keyBoard.getSellPrice(), 0.1);
+    }
+
+    @Test
     public void canCalculateTotalProfit(){
         shop.addStock(guitar);
         shop.addStock(drumKit);

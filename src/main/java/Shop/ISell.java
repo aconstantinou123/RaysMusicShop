@@ -8,6 +8,8 @@ public interface ISell {
 
     public double getSellPrice();
 
+    public void adjustSellPrice(double percent);
+
     public String prettyName();
 
     public String getName();

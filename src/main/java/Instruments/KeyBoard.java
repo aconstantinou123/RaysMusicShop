@@ -50,4 +50,8 @@ public class KeyBoard extends Instrument implements ISell, IPlay{
     public String prettyName() {
         return getColour() + " " + getMake() + " " + getModel() + " " + getName();
     }
+
+    public void adjustSellPrice(double percent) {
+        this.sellPrice = this.sellPrice * (percent / 100);
+    }
 }

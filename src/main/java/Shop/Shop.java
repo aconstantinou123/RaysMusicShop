@@ -87,7 +87,7 @@ public class Shop {
     public String searchByProductName(String itemName){
         ArrayList<ISell> foundInstrument = new ArrayList<>();
         for (ISell item : stock){
-            if (itemName.equals(item.getName()) && !foundInstrument.contains(item.getName())){
+            if (itemName.equals(item.getName())){
                 foundInstrument.add(item);
             }
         }
@@ -109,6 +109,8 @@ public class Shop {
         String result = String.join("\n", allStockUnique);
         return result;
     }
+
+//    public void applySalePrices(double ){}
 
 
 }

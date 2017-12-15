@@ -70,4 +70,12 @@ public class DrumKit extends Instrument implements ISell, IPlay{
     public String prettyName() {
         return getColour() + " " + getMake() + " " + getModel() + " " + getName();
     }
+
+    public void adjustSellPrice(double percent) {
+        for (IDrum drum : drums){
+            double price = drum.getSellPrice() * (percent / 100);
+            drum.setSellPrice(price);
+        }
+        drumStick.adjustSellPrice(percent);
+    }
 }

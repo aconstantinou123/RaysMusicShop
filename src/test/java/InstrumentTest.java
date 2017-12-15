@@ -115,9 +115,27 @@ public class InstrumentTest {
     }
 
     @Test
+    public void canAdjustTotalSellPrice_Drums(){
+        drumKit.addDrum(bassDrum);
+        drumKit.addDrum(tomTomDrum);
+        drumKit.addDrum(cymbal);
+        drumKit.addDrum(snare);
+        assertEquals(620.0, drumKit.getSellPrice(), 0.1);
+        drumKit.adjustSellPrice(10);
+        assertEquals(62, drumKit.getSellPrice(), 0.1);
+    }
+
+    @Test
+    public void canAdjustTotalSellPrice_Guitar(){
+        guitar.adjustSellPrice(50);
+        assertEquals(155, guitar.getSellPrice(), 0.1);
+    }
+
+    @Test
     public void canGetNumberOfKeys(){
         assertEquals(91, keyBoard.getNumberOfKeys());
     }
+
 
     @Test
     public void canSetBuyPrice(){

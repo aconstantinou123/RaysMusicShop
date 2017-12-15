@@ -76,4 +76,9 @@ public class Guitar extends Instrument implements ISell, IPlay {
     public String prettyName() {
         return getColour() + " " + getMake() + " " + getModel() + " " + getName();
     }
+
+    public void adjustSellPrice(double percent){
+       guitarString.adjustSellPrice(percent);
+       this.sellPrice = sellPrice * (percent / 100);
+    }
 }

@@ -85,6 +85,12 @@ public class ShopTest {
     }
 
     @Test
+    public void canAdjustSellPrice(){
+        bassDrum.adjustSellPrice(10);
+        assertEquals(27.5,bassDrum.getSellPrice(), 0.1);
+    }
+
+    @Test
     public void canGetStockSize(){
         assertEquals(0, shop.numberOfItemsInStock());
     }

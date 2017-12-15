@@ -45,4 +45,8 @@ public class GuitarString implements ISell{
     public void setName(String name) {
         this.name = name;
     }
+
+    public void adjustSellPrice(double percent) {
+        this.sellPrice = this.sellPrice * (percent / 100);
+    }
 }

@@ -27,18 +27,18 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        guitarString = new GuitarString(5, 10);
-        guitar = new Guitar("mahogany", Colour.BLACK, Type.STRING,
+        guitarString = new GuitarString("Guitar String", 5, 10);
+        guitar = new Guitar("Guitar","mahogany", Colour.BLACK, Type.STRING,
                 Make.BCRICH, "G756", 6, true, 200, 300, guitarString);
 
-        bassDrum = new BassDrum(150, 275);
-        cymbal = new Cymbal(50, 75);
-        snare = new Snare(70, 100);
-        tomTomDrum = new TomTomDrum(70, 150);
-        drumStick = new DrumStick(10, 20);
-        drumKit = new DrumKit("Oak", Colour.BLUE, Type.PERCUSSION, Make.TAMA, "Tiger Mark 7", drumStick);
+        bassDrum = new BassDrum("Bass Drum", 150, 275);
+        cymbal = new Cymbal("Cymbal", 50, 75);
+        snare = new Snare("Snare", 70, 100);
+        tomTomDrum = new TomTomDrum("Tom Tom Drum", 70, 150);
+        drumStick = new DrumStick("Drum Stick", 10, 20);
+        drumKit = new DrumKit("Drum Kit","Oak", Colour.BLUE, Type.PERCUSSION, Make.TAMA, "Tiger Mark 7", drumStick);
 
-        keyBoard = new KeyBoard("plastic", Colour.RED, Type.KEYBOARD, Make.ROLAND, "ty6788", 91,
+        keyBoard = new KeyBoard("Keyboard","plastic", Colour.RED, Type.KEYBOARD, Make.ROLAND, "ty6788", 91,
         200, 300 );
     }
 

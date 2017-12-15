@@ -2,10 +2,12 @@ package Drums;
 
 public class BassDrum implements IDrum {
 
+    private String name;
     private double buyPrice;
     private double sellPrice;
 
-    public BassDrum(double buyPrice, double sellPrice) {
+    public BassDrum(String name, double buyPrice, double sellPrice) {
+        this.name = name;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }
@@ -24,5 +26,13 @@ public class BassDrum implements IDrum {
 
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

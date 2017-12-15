@@ -1,21 +1,29 @@
 package Instruments;
 
-import Instruments.Colour;
-
 public class Instrument {
 
+    private String name;
     private String material;
     private Colour colour;
     private Type type;
     private Make make;
     private String model;
 
-    public Instrument(String material, Colour colour, Type type, Make make, String model) {
+    public Instrument(String name, String material, Colour colour, Type type, Make make, String model) {
+        this.name = name;
         this.material = material;
         this.colour = colour;
         this.type = type;
         this.make = make;
         this.model = model;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMaterial() {

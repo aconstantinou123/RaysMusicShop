@@ -2,10 +2,12 @@ package Drums;
 
 public class Snare implements IDrum{
 
+    private String name;
     private double buyPrice;
     private double sellPrice;
 
-    public Snare(double buyPrice, double sellPrice) {
+    public Snare(String name, double buyPrice, double sellPrice) {
+        this.name = name;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }
@@ -24,5 +26,13 @@ public class Snare implements IDrum{
 
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

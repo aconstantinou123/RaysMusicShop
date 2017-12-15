@@ -10,8 +10,8 @@ public class DrumKit extends Instrument{
     private ArrayList<IDrum> drums;
     private DrumStick drumStick;
 
-    public DrumKit(String material, Colour colour, Type type, Make make, String model, DrumStick drumStick) {
-        super(material, colour, type, make, model);
+    public DrumKit(String name, String material, Colour colour, Type type, Make make, String model, DrumStick drumStick) {
+        super(name, material, colour, type, make, model);
         this.drums = new ArrayList<>();
         this.drumStick = drumStick;
     }

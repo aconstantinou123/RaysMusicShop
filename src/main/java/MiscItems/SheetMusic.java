@@ -1,12 +1,12 @@
-package Drums;
+package MiscItems;
 
-public class Cymbal implements IDrum{
+public class SheetMusic {
 
     private String name;
     private double buyPrice;
     private double sellPrice;
 
-    public Cymbal(String name, double buyPrice, double sellPrice) {
+    public SheetMusic(String name, double buyPrice, double sellPrice) {
         this.name = name;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
@@ -36,3 +36,4 @@ public class Cymbal implements IDrum{
         this.name = name;
     }
 }
+

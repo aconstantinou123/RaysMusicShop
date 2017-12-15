@@ -11,9 +11,9 @@ public class Guitar extends Instrument {
     private double sellPrice;
     private GuitarString guitarString;
 
-    public Guitar(String material, Colour colour, Type type, Make make, String model,
+    public Guitar(String name, String material, Colour colour, Type type, Make make, String model,
                   int numberOfStrings, boolean isElectric, double buyPrice, double sellPrice, GuitarString guitarString) {
-        super(material, colour, type, make, model);
+        super(name, material, colour, type, make, model);
 
         this.numberOfStrings = numberOfStrings;
         this.isElectric = isElectric;

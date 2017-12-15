@@ -7,4 +7,6 @@ public interface ISell {
     public double getBuyPrice();
 
     public double getSellPrice();
+
+    public String prettyName();
 }

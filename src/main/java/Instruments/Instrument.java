@@ -65,4 +65,5 @@ public abstract class Instrument {
     public void setModel(String model) {
         this.model = model;
     }
+
 }

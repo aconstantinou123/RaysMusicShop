@@ -30,12 +30,12 @@ public class GuitarString implements ISell{
         return sellPrice;
     }
 
-    public void setSellPrice(double sellPrice) {
-        this.sellPrice = sellPrice;
+    public String prettyName() {
+        return name;
     }
 
-    public String getName() {
-        return name;
+    public void setSellPrice(double sellPrice) {
+        this.sellPrice = sellPrice;
     }
 
     public void setName(String name) {

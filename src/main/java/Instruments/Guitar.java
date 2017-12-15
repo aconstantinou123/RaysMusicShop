@@ -72,4 +72,8 @@ public class Guitar extends Instrument implements ISell, IPlay {
     public String play() {
         return "wowowowowowowowowoweeeeeeeee" ;
     }
+
+    public String prettyName() {
+        return getColour() + " " + getMake() + " " + getModel() + " " + getName();
+    }
 }

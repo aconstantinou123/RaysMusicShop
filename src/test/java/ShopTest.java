@@ -30,6 +30,7 @@ public class ShopTest {
     SheetMusic sheetMusic;
 
     KeyBoard keyBoard;
+    KeyBoard keyBoard2;
 
     Shop shop;
 
@@ -52,6 +53,9 @@ public class ShopTest {
         drumKit = new DrumKit("Drum Kit", "Oak", Colour.BLUE, Type.PERCUSSION, Make.TAMA, "Tiger Mark 7", drumStick);
 
         keyBoard = new KeyBoard("Keyboard", "plastic", Colour.RED, Type.KEYBOARD, Make.ROLAND, "ty6788", 91,
+                200, 300);
+
+        keyBoard2 = new KeyBoard("Keyboard", "plastic", Colour.BLACK, Type.KEYBOARD, Make.STEINWAY, "X$6788", 65,
                 200, 300);
 
         sheetMusic = new SheetMusic("Sheet Music", 2, 6);
@@ -141,5 +145,43 @@ public class ShopTest {
         assertEquals(8, shop.numberOfItemsInStock());
         assertEquals(1836, shop.calculateTotalSellPrice(), 0.1);
 
+    }
+
+    @Test
+    public void canListAllItems() {
+        shop.addStock(guitar);
+        shop.addStock(drumKit);
+        shop.addStock(keyBoard);
+        shop.addStock(bassDrum2);
+        shop.addStock(snare2);
+        shop.addStock(tomTomDrum2);
+        shop.addStock(cymbal2);
+        shop.addStock(sheetMusic);
+        assertEquals("Bass Drum\n" +
+                "Black BC Rich G756 Guitar\n" +
+                "Blue Tama Tiger Mark 7 Drum Kit\n" +
+                "Cymbal\n" +
+                "Red Roland ty6788 Keyboard\n" +
+                "Sheet Music\n" +
+                "Snare\n" +
+                "Tom Tom Drum", shop.listAllStock());
+    }
+
+    @Test
+    public void canListAllItemsByClass() {
+        shop.addStock(guitar);
+        shop.addStock(drumKit);
+        shop.addStock(keyBoard);
+        shop.addStock(keyBoard2);
+        shop.addStock(bassDrum2);
+        shop.addStock(snare2);
+        shop.addStock(tomTomDrum2);
+        shop.addStock(cymbal2);
+        shop.addStock(sheetMusic);
+        assertEquals("Black BC Rich G756 Guitar", shop.listItemsByClass(Guitar.class));
+        assertEquals("Blue Tama Tiger Mark 7 Drum Kit", shop.listItemsByClass(DrumKit.class));
+        assertEquals("Sheet Music", shop.listItemsByClass(SheetMusic.class));
+        assertEquals("Red Roland ty6788 Keyboard\n" +
+                "Black Steinway X$6788 Keyboard", shop.listItemsByClass(KeyBoard.class));
     }
 }

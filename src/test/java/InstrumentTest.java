@@ -44,7 +44,7 @@ public class InstrumentTest {
 
     @Test
     public void canGetColour(){
-        assertEquals("black", guitar.getColour());
+        assertEquals("Black", guitar.getColour());
     }
 
     @Test
@@ -123,5 +123,12 @@ public class InstrumentTest {
     public void canSetBuyPrice(){
         keyBoard.setBuyPrice(2000);
         assertEquals(2000, keyBoard.getBuyPrice(), 0.1);
+    }
+
+    @Test
+    public void canGetPrettyName(){
+        assertEquals("Black BC Rich G756 Guitar", guitar.prettyName());
+        assertEquals("Blue Tama Tiger Mark 7 Drum Kit", drumKit.prettyName());
+        assertEquals("Red Roland ty6788 Keyboard", keyBoard.prettyName());
     }
 }

@@ -46,4 +46,8 @@ public class KeyBoard extends Instrument implements ISell, IPlay{
     public String play() {
         return "plink plank plonk";
     }
+
+    public String prettyName() {
+        return getColour() + " " + getMake() + " " + getModel() + " " + getName();
+    }
 }

@@ -2,16 +2,16 @@ package Instruments;
 
 public enum Colour {
 
-    BLACK ("black"),
-    WHITE ("white"),
-    YELLOW ("yellow"),
-    ORANGE ("orange"),
-    GREEN ("green"),
-    BLUE  ("blue"),
-    PURPLE ("purple"),
-    RED ("red"),
-    GOLD ("gold"),
-    SILVER ("silver");
+    BLACK ("Black"),
+    WHITE ("White"),
+    YELLOW ("Yellow"),
+    ORANGE ("Orange"),
+    GREEN ("Green"),
+    BLUE  ("Blue"),
+    PURPLE ("Purple"),
+    RED ("Red"),
+    GOLD ("Gold"),
+    SILVER ("Silver");
 
     final String colour;
 

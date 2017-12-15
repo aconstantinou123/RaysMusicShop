@@ -30,13 +30,14 @@ public class SheetMusic implements ISell {
         return sellPrice;
     }
 
+    public String prettyName() {
+        return name;
+    }
+
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public void setName(String name) {
         this.name = name;

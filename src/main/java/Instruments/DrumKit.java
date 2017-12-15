@@ -63,8 +63,11 @@ public class DrumKit extends Instrument implements ISell, IPlay{
         return price;
     }
 
-
     public String play() {
         return "bang bang bang";
+    }
+
+    public String prettyName() {
+        return getColour() + " " + getMake() + " " + getModel() + " " + getName();
     }
 }

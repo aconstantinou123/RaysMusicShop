@@ -1,6 +1,8 @@
 package Shop;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Shop {
 
@@ -59,4 +61,27 @@ public class Shop {
         }
         return sellPrice;
     }
+
+    public String listItemsByClass(Class searchItem){
+        ArrayList<String> foundInstruments = new ArrayList<>();
+        for (ISell item : stock){
+            if (searchItem == item.getClass()){
+                foundInstruments.add(item.prettyName());
+            }
+        }
+        String result = String.join("\n", foundInstruments);
+        return result;
+    }
+
+    public String listAllStock(){
+        ArrayList<String> allInstruments = new ArrayList<>();
+        for (ISell item : stock){
+            allInstruments.add(item.prettyName());
+            Collections.sort(allInstruments);
+        }
+
+        String result = String.join("\n", allInstruments);
+        return result;
+    }
+
 }

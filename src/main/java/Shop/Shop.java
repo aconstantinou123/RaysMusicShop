@@ -90,8 +90,24 @@ public class Shop {
                 foundInstrument.add(item);
             }
         }
-        String result = String.format("%s: %s", itemName, foundInstrument.size());
-        return result;
+        if (!foundInstrument.isEmpty()) {
+            String result = String.format("%s: %s", itemName, foundInstrument.size());
+            return result;
+        }
+        else {
+            return "Nothing found";
+        }
+    }
+
+    public String searchByProductNamePrettyList(String itemName){
+        ArrayList<String> foundInstrument = new ArrayList<>();
+        for (ISell item : stock){
+            if (itemName.equals(item.getName())){
+                foundInstrument.add(item.prettyName());
+            }
+        }
+            String result = String.join("\n", foundInstrument);
+            return result;
     }
 
     public String displayStock(){

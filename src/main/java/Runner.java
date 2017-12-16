@@ -75,7 +75,8 @@ public class Runner {
             System.out.println("Ray Music Shop Admin \nPlease select and option or press q to exit");
             System.out.println("1. List all stock\n" +
                             "2. List by type\n" +
-                            "3. Financial Totals\n");
+                            "3. Search for products\n" +
+                            "4. Financial Totals\n");
             choice = scanner.nextLine();
             switch (choice){
                 case "1":
@@ -96,6 +97,17 @@ public class Runner {
                     break;
 
                 case "3":
+                    do {
+                        System.out.printf("Please enter the type of product you are looking for  \n");
+                        String search = scanner.nextLine();
+                        System.out.printf(shop.searchByProductName(search) + "\n");
+                        System.out.printf(shop.searchByProductNamePrettyList(search) + "\n");
+                        System.out.println("\nPress q to return to the main menu or any other key to search again");
+                        choice2 = scanner.nextLine();
+                    }while (!choice2.equals("q"));
+                    break;
+
+                case "4":
                     do {
                         System.out.printf("Buy price of all stock: £" + shop.calculateTotalBuyPrice() + "\n");
                         System.out.printf("Sell price of all stock: £" + shop.calculateTotalSellPrice() + "\n");

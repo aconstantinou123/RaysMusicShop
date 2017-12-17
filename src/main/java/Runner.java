@@ -121,7 +121,8 @@ public class Runner {
                 case "5":
                     do {
                         System.out.println("Choose and instrument to add or press q to go back\n");
-                        System.out.println("1. Guitar");
+                        System.out.println("1. Guitar\n" +
+                                            "2. Keyboard");
                         choice2 = scanner.nextLine();
                             switch (choice2){
                                 case "1":
@@ -154,8 +155,27 @@ public class Runner {
                                     GuitarString newStrings = new GuitarString("GuitarString", 5, 10);
                                     Guitar newGuitar = new Guitar("Guitar", material, colour, Type.STRING, make, model, strings, isElectric, buyPrice, sellPrice, newStrings);
                                     shop.addStock(newGuitar);
-                                    System.out.println(newGuitar.prettyName() + " added to stock");
+                                    System.out.println(newGuitar.prettyName() + " added to stock\n");
+                                    break;
 
+                                case "2":
+                                    System.out.println("What is the make of keyboard?");
+                                    String makeK = scanner.nextLine();
+                                    System.out.println("What is the model?");
+                                    String modelK = scanner.nextLine();
+                                    System.out.println("What is the keyboard made of?");
+                                    String materialK = scanner.nextLine();
+                                    System.out.println("What colour is the keyboard?");
+                                    String colourK = scanner.nextLine();
+                                    System.out.println("How many keys does it have?");
+                                    Integer keysK = Integer.parseInt(scanner.nextLine());
+                                    System.out.println("Buy price?");
+                                    Integer buyPriceK = Integer.parseInt(scanner.nextLine());
+                                    System.out.println("Sell price?");
+                                    Integer sellPriceK = Integer.parseInt(scanner.nextLine());
+                                    KeyBoard newKeyboard = new KeyBoard("Keyboard", materialK, colourK, Type.KEYBOARD, makeK, modelK, keysK, buyPriceK, sellPriceK);
+                                    shop.addStock(newKeyboard);
+                                    System.out.println(newKeyboard.prettyName() + " added to stock\n");
                                     break;
                             }
 

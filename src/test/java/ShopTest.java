@@ -235,5 +235,22 @@ public class ShopTest {
                 "Sheet Music: 1", shop.displayStock());
     }
 
+    @Test
+    public void canLisIDrumObjects() {
+        shop.addStock(guitar);
+        shop.addStock(drumKit);
+        shop.addStock(keyBoard);
+        shop.addStock(keyBoard2);
+        shop.addStock(bassDrum2);
+        shop.addStock(snare2);
+        shop.addStock(tomTomDrum2);
+        shop.addStock(cymbal2);
+        shop.addStock(sheetMusic);
+        assertEquals("Bass Drum\n" +
+                "Cymbal\n" +
+                "Snare\n" +
+                "Tom Tom Drum", shop.listAllIDrum());
+    }
+
 
 }

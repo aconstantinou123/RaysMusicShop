@@ -1,5 +1,7 @@
 package Shop;
 
+import Drums.IDrum;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -80,6 +82,18 @@ public class Shop {
         }
 
         String result = String.join("\n", allInstruments);
+        return result;
+    }
+
+    public String listAllIDrum(){
+        ArrayList<String> iDrumInstruments = new ArrayList<>();
+        for (ISell item : stock){
+                if(item instanceof IDrum)
+            iDrumInstruments.add(item.prettyName());
+            Collections.sort(iDrumInstruments);
+        }
+
+        String result = String.join("\n", iDrumInstruments);
         return result;
     }
 

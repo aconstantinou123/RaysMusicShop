@@ -11,7 +11,7 @@ public class DrumKit extends Instrument implements ISell, IPlay{
     private ArrayList<IDrum> drums;
     private DrumStick drumStick;
 
-    public DrumKit(String name, String material, Colour colour, Type type, Make make, String model, DrumStick drumStick) {
+    public DrumKit(String name, String material, String colour, Type type, String make, String model, DrumStick drumStick) {
         super(name, material, colour, type, make, model);
         this.drums = new ArrayList<>();
         this.drumStick = drumStick;

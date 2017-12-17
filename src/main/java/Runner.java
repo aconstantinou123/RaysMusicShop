@@ -23,8 +23,8 @@ public class Runner {
     public static void main(String[] args) {
 
         GuitarString guitarString = new GuitarString("Guitar String", 5, 10);
-        Guitar guitar = new Guitar("Guitar", "mahogany", Colour.BLACK, Type.STRING,
-                Make.BCRICH, "G756", 6, true, 200, 300, guitarString);
+        Guitar guitar = new Guitar("Guitar", "mahogany", "Black", Type.STRING,
+                "BC Rich", "G756", 6, true, 200, 300, guitarString);
 
         BassDrum bassDrum = new BassDrum("Bass Drum", 150, 275);
         BassDrum bassDrum2 = new BassDrum("Bass Drum", 150, 275);
@@ -35,12 +35,12 @@ public class Runner {
         TomTomDrum tomTomDrum = new TomTomDrum("Tom Tom Drum", 70, 150);
         TomTomDrum tomTomDrum2 = new TomTomDrum("Tom Tom Drum", 70, 150);
         DrumStick drumStick = new DrumStick("Drum Stick", 10, 20);
-        DrumKit drumKit = new DrumKit("Drum Kit", "Oak", Colour.BLUE, Type.PERCUSSION, Make.TAMA, "Tiger Mark 7", drumStick);
+        DrumKit drumKit = new DrumKit("Drum Kit", "Oak", "Blue", Type.PERCUSSION, "Tama", "Tiger Mark 7", drumStick);
 
-        KeyBoard keyBoard = new KeyBoard("Keyboard", "plastic", Colour.RED, Type.KEYBOARD, Make.ROLAND, "ty6788", 91,
+        KeyBoard keyBoard = new KeyBoard("Keyboard", "plastic", "Red", Type.KEYBOARD, "Roland", "ty6788", 91,
                 200, 300);
 
-        KeyBoard keyBoard2 = new KeyBoard("Keyboard", "plastic", Colour.BLACK, Type.KEYBOARD, Make.STEINWAY, "X$6788", 65,
+        KeyBoard keyBoard2 = new KeyBoard("Keyboard", "plastic", "Black", Type.KEYBOARD, "Steinway", "XS6788", 65,
                 200, 300);
 
         SheetMusic sheetMusic = new SheetMusic("Sheet Music", 2, 6);

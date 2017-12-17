@@ -4,12 +4,12 @@ public abstract class Instrument {
 
     private String name;
     private String material;
-    private Colour colour;
+    private String colour;
     private Type type;
-    private Make make;
+    private String make;
     private String model;
 
-    public Instrument(String name, String material, Colour colour, Type type, Make make, String model) {
+    public Instrument(String name, String material, String colour, Type type, String make, String model) {
         this.name = name;
         this.material = material;
         this.colour = colour;
@@ -35,10 +35,10 @@ public abstract class Instrument {
     }
 
     public String getColour() {
-        return colour.getColour();
+        return colour;
     }
 
-    public void setColour(Colour colour) {
+    public void setColour(String colour) {
         this.colour = colour;
     }
 
@@ -51,10 +51,10 @@ public abstract class Instrument {
     }
 
     public String getMake() {
-        return make.getMake();
+        return make;
     }
 
-    public void setMake(Make make) {
+    public void setMake(String make) {
         this.make = make;
     }
 

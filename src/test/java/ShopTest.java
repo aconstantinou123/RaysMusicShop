@@ -38,8 +38,8 @@ public class ShopTest {
     @Before
     public void before() {
         guitarString = new GuitarString("Guitar String", 5, 10);
-        guitar = new Guitar("Guitar", "mahogany", Colour.BLACK, Type.STRING,
-                Make.BCRICH, "G756", 6, true, 200, 300, guitarString);
+        guitar = new Guitar("Guitar", "mahogany", "Black", Type.STRING,
+                "BC Rich", "G756", 6, true, 200, 300, guitarString);
 
         bassDrum = new BassDrum("Bass Drum", 150, 275);
         bassDrum2 = new BassDrum("Bass Drum", 150, 275);
@@ -50,12 +50,12 @@ public class ShopTest {
         tomTomDrum = new TomTomDrum("Tom Tom Drum", 70, 150);
         tomTomDrum2 = new TomTomDrum("Tom Tom Drum", 70, 150);
         drumStick = new DrumStick("Drum Stick", 10, 20);
-        drumKit = new DrumKit("Drum Kit", "Oak", Colour.BLUE, Type.PERCUSSION, Make.TAMA, "Tiger Mark 7", drumStick);
+        drumKit = new DrumKit("Drum Kit", "Oak", "Blue", Type.PERCUSSION, "Tama", "Tiger Mark 7", drumStick);
 
-        keyBoard = new KeyBoard("Keyboard", "plastic", Colour.RED, Type.KEYBOARD, Make.ROLAND, "ty6788", 91,
+        keyBoard = new KeyBoard("Keyboard", "plastic", "Red", Type.KEYBOARD, "Roland", "ty6788", 91,
                 200, 300);
 
-        keyBoard2 = new KeyBoard("Keyboard", "plastic", Colour.BLACK, Type.KEYBOARD, Make.STEINWAY, "X$6788", 65,
+        keyBoard2 = new KeyBoard("Keyboard", "plastic", "Black", Type.KEYBOARD, "Steinway", "X$6788", 65,
                 200, 300);
 
         sheetMusic = new SheetMusic("Sheet Music", 2, 6);

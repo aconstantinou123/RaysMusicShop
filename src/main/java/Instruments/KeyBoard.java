@@ -8,7 +8,7 @@ public class KeyBoard extends Instrument implements ISell, IPlay{
     private double buyPrice;
     private double sellPrice;
 
-    public KeyBoard(String name, String material, Colour colour, Type type, Make make, String model, int numberOfKeys, double buyPrice, double sellPrice) {
+    public KeyBoard(String name, String material, String colour, Type type, String make, String model, int numberOfKeys, double buyPrice, double sellPrice) {
         super(name, material, colour, type, make, model);
         this.numberOfKeys = numberOfKeys;
         this.buyPrice = buyPrice;

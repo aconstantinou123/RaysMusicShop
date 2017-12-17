@@ -75,10 +75,12 @@ public class Shop {
         return result;
     }
 
+
     public String listAllStock(){
         ArrayList<String> allInstruments = new ArrayList<>();
         for (ISell item : stock){
-            allInstruments.add(item.prettyName());
+            allInstruments.add(String.format("%s   Buy: £%s   Sell: £%s   Markup £%s", item.prettyName(), item.getBuyPrice(),
+            item.getSellPrice(), item.calculateMarkup()));
             Collections.sort(allInstruments);
         }
 
@@ -118,7 +120,8 @@ public class Shop {
         ArrayList<String> foundInstrument = new ArrayList<>();
         for (ISell item : stock){
             if (itemName.contains(item.getName())){
-                foundInstrument.add(item.prettyName());
+                foundInstrument.add(String.format("%s   Buy: £%s   Sell: £%s   Markup £%s", item.prettyName(), item.getBuyPrice(),
+                        item.getSellPrice(), item.calculateMarkup()));
             }
         }
             String result = String.join("\n", foundInstrument);

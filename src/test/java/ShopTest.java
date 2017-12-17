@@ -165,7 +165,7 @@ public class ShopTest {
     }
 
     @Test
-    public void canListAllItems() {
+    public void canListAllItemsFull() {
         shop.addStock(guitar);
         shop.addStock(drumKit);
         shop.addStock(keyBoard);
@@ -174,14 +174,14 @@ public class ShopTest {
         shop.addStock(tomTomDrum2);
         shop.addStock(cymbal2);
         shop.addStock(sheetMusic);
-        assertEquals("Black BC Rich G756 Guitar\n" +
-                "Blue Tama Tiger Mark 7 Drum Kit\n" +
-                "Extreme Bass\n" +
-                "Hash Crash Snare\n" +
-                "Red Roland ty6788 Keyboard\n" +
-                "Sheet Music\n" +
-                "Tama Xtreme\n" +
-                "Zildjian Smash", shop.listAllStock());
+        assertEquals("Black BC Rich G756 Guitar   Buy: £205.0   Sell: £310.0   Markup £110.0\n" +
+                "Blue Tama Tiger Mark 7 Drum Kit   Buy: £350.0   Sell: £620.0   Markup £270.0\n" +
+                "Extreme Bass   Buy: £150.0   Sell: £275.0   Markup £125.0\n" +
+                "Hash Crash Snare   Buy: £70.0   Sell: £100.0   Markup £30.0\n" +
+                "Red Roland ty6788 Keyboard   Buy: £200.0   Sell: £300.0   Markup £100.0\n" +
+                "Sheet Music   Buy: £2.0   Sell: £6.0   Markup £4.0\n" +
+                "Tama Xtreme   Buy: £70.0   Sell: £150.0   Markup £80.0\n" +
+                "Zildjian Smash   Buy: £50.0   Sell: £75.0   Markup £25.0", shop.listAllStock());
     }
 
     @Test

@@ -76,8 +76,9 @@ public class Runner {
                             "2. List by type\n" +
                             "3. Search for products\n" +
                             "4. Financial Totals\n" +
-                            "5. Remove stock\n" +
-                            "6. Add stock\n");
+                            "5. Apply Sale Prices\n" +
+                            "6. Remove stock\n" +
+                            "7. Add stock\n");
             choice = scanner.nextLine();
             switch (choice){
                 case "1":
@@ -118,7 +119,18 @@ public class Runner {
                     }while (!choice2.equals("q"));
                     break;
 
-                case"5":
+                case "5":
+                    do {
+                        System.out.println("Type the percent you wish to reduce prices to: ");
+                        Double percent = Double.parseDouble(scanner.nextLine());
+                        shop.applySalePrices(percent);
+                        System.out.println("Prices adjusted to " + percent + "%");
+                        System.out.println(shop.listAllStock());
+                        choice2 = scanner.nextLine();
+                    }while (!choice2.equals("q"));
+                    break;
+
+                case"6":
                     System.out.println(shop.listAllStock() + "\n");
                     System.out.println("Type the name of the items you wish to remove");
                     String itemToRemove = scanner.nextLine();
@@ -126,7 +138,7 @@ public class Runner {
                     System.out.println(itemToRemove + " removed from stock");
                     break;
 
-                case "6":
+                case "7":
                     do {
                         System.out.println("Choose and instrument to add or press q to go back\n");
                         System.out.println("1. Guitar\n" +

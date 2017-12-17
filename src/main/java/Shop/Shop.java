@@ -156,12 +156,14 @@ public class Shop {
         return drum;
     }
 
-    public void removeByPrettyName(String prettyName){
+    public String removeByPrettyName(String prettyName){
         for (ISell item : stock){
             if (prettyName.equals(item.prettyName())){
                 removeStock(item);
+                return item.prettyName() + " removed";
             }
         }
+        return "item not found";
     }
 
 

@@ -76,13 +76,14 @@ public class Runner {
             System.out.println("1. List all stock\n" +
                             "2. List by type\n" +
                             "3. Search for products\n" +
-                            "4. Financial Totals\n");
+                            "4. Financial Totals\n" +
+                            "5. Add stock\n");
             choice = scanner.nextLine();
             switch (choice){
                 case "1":
                     String choice2;
                     do {
-                        System.out.printf(shop.listAllStock() + "\n");
+                        System.out.println(shop.listAllStock());
                         System.out.println("\nPress q to return to the main menu");
                         choice2 = scanner.nextLine();
                     }while (!choice2.equals("q"));
@@ -90,7 +91,7 @@ public class Runner {
 
                 case "2":
                     do {
-                        System.out.printf(shop.displayStock() + "\n");
+                        System.out.println(shop.displayStock());
                         System.out.println("\nPress q to return to the main menu");
                         choice2 = scanner.nextLine();
                     }while (!choice2.equals("q"));
@@ -98,22 +99,66 @@ public class Runner {
 
                 case "3":
                     do {
-                        System.out.printf("Please enter the type of product you are looking for  \n");
+                        System.out.println("Please enter the type of product you are looking for");
                         String search = scanner.nextLine();
-                        System.out.printf(shop.searchByProductName(search) + "\n");
-                        System.out.printf(shop.searchByProductNamePrettyList(search) + "\n");
-                        System.out.println("\nPress q to return to the main menu or any other key to search again");
+                        System.out.println(shop.searchByProductName(search));
+                        System.out.println(shop.searchByProductNamePrettyList(search));
+                        System.out.println("Press q to return to the main menu or any other key to search again");
                         choice2 = scanner.nextLine();
                     }while (!choice2.equals("q"));
                     break;
 
                 case "4":
                     do {
-                        System.out.printf("Buy price of all stock: £" + shop.calculateTotalBuyPrice() + "\n");
-                        System.out.printf("Sell price of all stock: £" + shop.calculateTotalSellPrice() + "\n");
-                        System.out.printf("Potential profit of all stock: £" + shop.calculateTotalPotentialProfit()+ "\n");
+                        System.out.println("Buy price of all stock: £" + shop.calculateTotalBuyPrice());
+                        System.out.println("Sell price of all stock: £" + shop.calculateTotalSellPrice());
+                        System.out.println("Potential profit of all stock: £" + shop.calculateTotalPotentialProfit());
                         System.out.println("\nPress q to return to the main menu");
                         choice2 = scanner.nextLine();
+                    }while (!choice2.equals("q"));
+                    break;
+
+                case "5":
+                    do {
+                        System.out.println("Choose and instrument to add or press q to go back\n");
+                        System.out.println("1. Guitar");
+                        choice2 = scanner.nextLine();
+                            switch (choice2){
+                                case "1":
+                                    System.out.println("What is the make of guitar?");
+                                    String make = scanner.nextLine();
+                                    System.out.println("What is the model?");
+                                    String model = scanner.nextLine();
+                                    System.out.println("What is the guitar made of?");
+                                    String material = scanner.nextLine();
+                                    System.out.println("What colour is the guitar?");
+                                    String colour = scanner.nextLine();
+                                    System.out.println("How many strings does it have?");
+                                    Integer strings = Integer.parseInt(scanner.nextLine());
+                                    System.out.println("Is the guitar electric of acoustic?");
+                                    String electric = scanner.nextLine();
+                                    boolean isElectric = true;
+                                        if (electric.equals("electric")){
+                                            isElectric = true;
+                                        }
+                                        else if (electric.equals("acoustic")){
+                                            isElectric = false;
+                                        }
+                                        else {
+                                            System.out.println("Unrecognised answer");
+                                        }
+                                    System.out.println("Buy price?");
+                                    Integer buyPrice = Integer.parseInt(scanner.nextLine());
+                                    System.out.println("Sell price?");
+                                    Integer sellPrice = Integer.parseInt(scanner.nextLine());
+                                    GuitarString newStrings = new GuitarString("GuitarString", 5, 10);
+                                    Guitar newGuitar = new Guitar("Guitar", material, colour, Type.STRING, make, model, strings, isElectric, buyPrice, sellPrice, newStrings);
+                                    shop.addStock(newGuitar);
+                                    System.out.println(newGuitar.prettyName() + " added to stock");
+
+                                    break;
+                            }
+
                     }while (!choice2.equals("q"));
                     break;
             }

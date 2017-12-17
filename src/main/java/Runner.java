@@ -122,7 +122,8 @@ public class Runner {
                         System.out.println("Choose and instrument to add or press q to go back\n");
                         System.out.println("1. Guitar\n" +
                                             "2. Keyboard\n" +
-                                            "3. Drum Kit\n");
+                                            "3. Individual Drums\n" +
+                                            "4. Drum Kit\n");
                         choice2 = scanner.nextLine();
                             switch (choice2){
                                 case "1":
@@ -179,6 +180,65 @@ public class Runner {
                                     break;
 
                                 case "3":
+                                    String choice3;
+                                    System.out.println("Select the type of drum/cymbal\n");
+                                    System.out.println("1. Bass Drum\n" +
+                                        "2. Snare\n" +
+                                        "3. Tom Tom Drum\n" +
+                                        "4. Cymbal\n");
+                                    choice3 = scanner.nextLine();
+                                    switch (choice3){
+                                        case "1":
+                                            System.out.println("What is the make and model?");
+                                            String modelBass = scanner.nextLine();
+                                            System.out.println("Buy price?");
+                                            Integer buyPriceBass = Integer.parseInt(scanner.nextLine());
+                                            System.out.println("Sell price?");
+                                            Integer sellPriceBass = Integer.parseInt(scanner.nextLine());
+                                            BassDrum newBassDrum = new BassDrum("Bass Drum", modelBass, buyPriceBass, sellPriceBass);
+                                            shop.addStock(newBassDrum);
+                                            System.out.println(newBassDrum.prettyName() + " added to stock\n");
+                                            break;
+
+                                        case "2":
+                                            System.out.println("What is the make and model?");
+                                            String modelSnare = scanner.nextLine();
+                                            System.out.println("Buy price?");
+                                            Integer buyPriceSnare = Integer.parseInt(scanner.nextLine());
+                                            System.out.println("Sell price?");
+                                            Integer sellPriceSnare = Integer.parseInt(scanner.nextLine());
+                                            Snare newSnareDrum = new Snare("Snare", modelSnare, buyPriceSnare, sellPriceSnare);
+                                            shop.addStock(newSnareDrum);
+                                            System.out.println(newSnareDrum.prettyName() + " added to stock\n");
+                                            break;
+
+                                        case "3":
+                                            System.out.println("What is the make and model?");
+                                            String modelTom = scanner.nextLine();
+                                            System.out.println("Buy price?");
+                                            Integer buyPriceTom = Integer.parseInt(scanner.nextLine());
+                                            System.out.println("Sell price?");
+                                            Integer sellPriceTom = Integer.parseInt(scanner.nextLine());
+                                            TomTomDrum newTomTomDrum = new TomTomDrum("Tom Tom Drum", modelTom, buyPriceTom, sellPriceTom);
+                                            shop.addStock(newTomTomDrum);
+                                            System.out.println(newTomTomDrum.prettyName() + " added to stock\n");
+                                            break;
+
+                                        case "4":
+                                            System.out.println("What is the make and model?");
+                                            String modelCym = scanner.nextLine();
+                                            System.out.println("Buy price?");
+                                            Integer buyPriceCym = Integer.parseInt(scanner.nextLine());
+                                            System.out.println("Sell price?");
+                                            Integer sellPriceCym = Integer.parseInt(scanner.nextLine());
+                                            Cymbal newCymbal = new Cymbal("Cymbal", modelCym, buyPriceCym, sellPriceCym);
+                                            shop.addStock(newCymbal);
+                                            System.out.println(newCymbal.prettyName() + " added to stock\n");
+                                            break;
+                                    }
+                                    break;
+
+                                case "4":
                                     System.out.println("What is the make of drum kit?");
                                     String makeD = scanner.nextLine();
                                     System.out.println("What is the model?");

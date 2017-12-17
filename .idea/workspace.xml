@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7505810-71c3-4f9c-b063-ba74a35d5bd5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Drums/Drum.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Drums/BassDrum.class" afterPath="$PROJECT_DIR$/out/production/classes/Drums/BassDrum.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Runner.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Shop/Shop.class" afterPath="$PROJECT_DIR$/out/production/classes/Shop/Shop.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/InstrumentTest.class" afterPath="$PROJECT_DIR$/out/test/classes/InstrumentTest.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ShopTest.class" afterPath="$PROJECT_DIR$/out/test/classes/ShopTest.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Drums/BassDrum.java" afterPath="$PROJECT_DIR$/src/main/java/Drums/BassDrum.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Drums/Cymbal.java" afterPath="$PROJECT_DIR$/src/main/java/Drums/Cymbal.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Drums/Snare.java" afterPath="$PROJECT_DIR$/src/main/java/Drums/Snare.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Drums/TomTomDrum.java" afterPath="$PROJECT_DIR$/src/main/java/Drums/TomTomDrum.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Runner.java" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shop/Shop.java" afterPath="$PROJECT_DIR$/src/main/java/Shop/Shop.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InstrumentTest.java" afterPath="$PROJECT_DIR$/src/test/java/InstrumentTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopTest.java" afterPath="$PROJECT_DIR$/src/test/java/ShopTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -171,8 +157,8 @@
       <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="199" column="39" lean-forward="true" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="39" />
+            <state relative-caret-position="1004">
+              <caret line="236" column="50" lean-forward="false" selection-start-line="236" selection-start-column="50" selection-end-line="236" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -654,14 +640,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Drums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RaysMusicShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RaysMusicShop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Instruments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -978,7 +956,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2696011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33425033" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1029,12 +1007,6 @@
           <line>20</line>
           <properties />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Runner.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="7" />
@@ -1479,8 +1451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="199" column="39" lean-forward="true" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="39" />
+        <state relative-caret-position="1004">
+          <caret line="236" column="50" lean-forward="false" selection-start-line="236" selection-start-column="50" selection-end-line="236" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

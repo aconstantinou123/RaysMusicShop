@@ -268,4 +268,14 @@ public class ShopTest {
         assertEquals(bassDrum, shop.selectIDrum("Tama Bass Drum Nexus"));
     }
 
+    @Test
+    public void canRemoveByName(){
+        shop.addStock(keyBoard2);
+        shop.addStock(bassDrum2);
+        shop.addStock(bassDrum);
+        assertEquals(3, shop.numberOfItemsInStock());
+        shop.removeByPrettyName("Extreme Bass");
+        assertEquals(2, shop.numberOfItemsInStock());
+    }
+
 }

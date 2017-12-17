@@ -156,5 +156,13 @@ public class Shop {
         return drum;
     }
 
+    public void removeByPrettyName(String prettyName){
+        for (ISell item : stock){
+            if (prettyName.equals(item.prettyName())){
+                removeStock(item);
+            }
+        }
+    }
+
 
 }

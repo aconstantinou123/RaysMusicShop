@@ -31,10 +31,10 @@ public class InstrumentTest {
         guitar = new Guitar("Guitar", "mahogany", "Black", Type.STRING,
                 "BC Rich", "G756", 6, true, 200, 300, guitarString);
 
-        bassDrum = new BassDrum("Bass Drum", 150, 275);
-        cymbal = new Cymbal("Cymbal", 50, 75);
-        snare = new Snare("Snare", 70, 100);
-        tomTomDrum = new TomTomDrum("Tom Tom Drum", 70, 150);
+        bassDrum = new BassDrum("Bass Drum","Tama Bass Drum Nexus", 150, 275);
+        cymbal = new Cymbal("Cymbal", "Tama Crash", 50,  75);
+        snare = new Snare("Snare", "Snake Charmer", 70, 100);
+        tomTomDrum = new TomTomDrum("Tom Tom Drum", "Tom Tom Forever",70, 150);
         drumStick = new DrumStick("Drum Stick", 10, 20);
         drumKit = new DrumKit("Drum Kit", "Oak", "Blue", Type.PERCUSSION, "Tama", "Tiger Mark 7", drumStick);
 

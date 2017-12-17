@@ -2,6 +2,7 @@ package Shop;
 
 import Drums.IDrum;
 
+import java.time.chrono.IsoChronology;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -100,7 +101,7 @@ public class Shop {
     public String searchByProductName(String itemName){
         ArrayList<ISell> foundInstrument = new ArrayList<>();
         for (ISell item : stock){
-            if (itemName.equals(item.getName())){
+            if (itemName.contains(item.getName())){
                 foundInstrument.add(item);
             }
         }
@@ -116,7 +117,7 @@ public class Shop {
     public String searchByProductNamePrettyList(String itemName){
         ArrayList<String> foundInstrument = new ArrayList<>();
         for (ISell item : stock){
-            if (itemName.equals(item.getName())){
+            if (itemName.contains(item.getName())){
                 foundInstrument.add(item.prettyName());
             }
         }
@@ -143,6 +144,16 @@ public class Shop {
         for (ISell items : stock){
             items.adjustSellPrice(percent);
         }
+    }
+
+    public IDrum selectIDrum(String nameOfDrum){
+        IDrum drum = null;
+        for (ISell item : stock){
+            if(item instanceof  IDrum && item.prettyName().equals(nameOfDrum)){
+                drum = ((IDrum) item);
+            }
+        }
+        return drum;
     }
 
 

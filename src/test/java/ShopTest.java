@@ -39,16 +39,16 @@ public class ShopTest {
     public void before() {
         guitarString = new GuitarString("Guitar String", 5, 10);
         guitar = new Guitar("Guitar", "mahogany", "Black", Type.STRING,
-                "BC Rich", "G756", 6, true, 200, 300, guitarString);
 
-        bassDrum = new BassDrum("Bass Drum", 150, 275);
-        bassDrum2 = new BassDrum("Bass Drum", 150, 275);
-        cymbal = new Cymbal("Cymbal", 50, 75);
-        cymbal2 = new Cymbal("Cymbal", 50, 75);
-        snare = new Snare("Snare", 70, 100);
-        snare2 = new Snare("Snare", 70, 100);
-        tomTomDrum = new TomTomDrum("Tom Tom Drum", 70, 150);
-        tomTomDrum2 = new TomTomDrum("Tom Tom Drum", 70, 150);
+                "BC Rich", "G756", 6, true, 200, 300, guitarString);
+        bassDrum = new BassDrum("Bass Drum", "Tama Bass Drum Nexus", 150, 275);
+        bassDrum2 = new BassDrum("Bass Drum", "Extreme Bass", 150, 275);
+        cymbal = new Cymbal("Cymbal", "Tama Crash", 50, 75);
+        cymbal2 = new Cymbal("Cymbal", "Zildjian Smash", 50, 75);
+        snare = new Snare("Snare", "Snake Charmer", 70, 100);
+        snare2 = new Snare("Snare", "Hash Crash Snare", 70, 100);
+        tomTomDrum = new TomTomDrum("Tom Tom Drum", "Tom Tom Forever",70, 150);
+        tomTomDrum2 = new TomTomDrum("Tom Tom Drum", "Tama Xtreme", 70, 150);
         drumStick = new DrumStick("Drum Stick", 10, 20);
         drumKit = new DrumKit("Drum Kit", "Oak", "Blue", Type.PERCUSSION, "Tama", "Tiger Mark 7", drumStick);
 
@@ -174,14 +174,14 @@ public class ShopTest {
         shop.addStock(tomTomDrum2);
         shop.addStock(cymbal2);
         shop.addStock(sheetMusic);
-        assertEquals("Bass Drum\n" +
-                "Black BC Rich G756 Guitar\n" +
+        assertEquals("Black BC Rich G756 Guitar\n" +
                 "Blue Tama Tiger Mark 7 Drum Kit\n" +
-                "Cymbal\n" +
+                "Extreme Bass\n" +
+                "Hash Crash Snare\n" +
                 "Red Roland ty6788 Keyboard\n" +
                 "Sheet Music\n" +
-                "Snare\n" +
-                "Tom Tom Drum", shop.listAllStock());
+                "Tama Xtreme\n" +
+                "Zildjian Smash", shop.listAllStock());
     }
 
     @Test
@@ -200,7 +200,7 @@ public class ShopTest {
         assertEquals("Sheet Music", shop.listItemsByClass(SheetMusic.class));
         assertEquals("Red Roland ty6788 Keyboard\n" +
                 "Black Steinway X$6788 Keyboard", shop.listItemsByClass(KeyBoard.class));
-        assertEquals("Bass Drum", shop.listItemsByClass(BassDrum.class));
+        assertEquals("Extreme Bass", shop.listItemsByClass(BassDrum.class));
     }
 
     @Test
@@ -246,11 +246,26 @@ public class ShopTest {
         shop.addStock(tomTomDrum2);
         shop.addStock(cymbal2);
         shop.addStock(sheetMusic);
-        assertEquals("Bass Drum\n" +
-                "Cymbal\n" +
-                "Snare\n" +
-                "Tom Tom Drum", shop.listAllIDrum());
+        assertEquals("Extreme Bass\n" +
+                "Hash Crash Snare\n" +
+                "Tama Xtreme\n" +
+                "Zildjian Smash", shop.listAllIDrum());
     }
 
+    @Test
+    public void canSelectDrumObjects() {
+        shop.addStock(guitar);
+        shop.addStock(drumKit);
+        shop.addStock(keyBoard);
+        shop.addStock(keyBoard2);
+        shop.addStock(bassDrum2);
+        shop.addStock(bassDrum);
+        shop.addStock(snare2);
+        shop.addStock(tomTomDrum2);
+        shop.addStock(cymbal2);
+        shop.addStock(sheetMusic);
+        assertEquals(bassDrum2, shop.selectIDrum("Extreme Bass"));
+        assertEquals(bassDrum, shop.selectIDrum("Tama Bass Drum Nexus"));
+    }
 
 }

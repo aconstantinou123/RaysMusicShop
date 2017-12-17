@@ -1,7 +1,4 @@
-import Drums.BassDrum;
-import Drums.Cymbal;
-import Drums.Snare;
-import Drums.TomTomDrum;
+import Drums.*;
 import Instruments.*;
 import MiscItems.DrumStick;
 import MiscItems.GuitarString;
@@ -26,14 +23,15 @@ public class Runner {
         Guitar guitar = new Guitar("Guitar", "mahogany", "Black", Type.STRING,
                 "BC Rich", "G756", 6, true, 200, 300, guitarString);
 
-        BassDrum bassDrum = new BassDrum("Bass Drum", 150, 275);
-        BassDrum bassDrum2 = new BassDrum("Bass Drum", 150, 275);
-        Cymbal cymbal = new Cymbal("Cymbal", 50, 75);
-        Cymbal cymbal2 = new Cymbal("Cymbal", 50, 75);
-        Snare snare = new Snare("Snare", 70, 100);
-        Snare snare2 = new Snare("Snare", 70, 100);
-        TomTomDrum tomTomDrum = new TomTomDrum("Tom Tom Drum", 70, 150);
-        TomTomDrum tomTomDrum2 = new TomTomDrum("Tom Tom Drum", 70, 150);
+        BassDrum bassDrum = new BassDrum("Bass Drum", "Tama Bass Drum Nexus", 150, 275);
+        BassDrum bassDrum1 = new BassDrum("Bass Drum", "Super Bass Drum", 150, 275);
+        BassDrum bassDrum2 = new BassDrum("Bass Drum", "Extreme Bass", 150, 275);
+        Cymbal cymbal = new Cymbal("Cymbal", "Zildjain Smash",50, 75);
+        Cymbal cymbal2 = new Cymbal("Cymbal", "Tama Crash", 50, 75);
+        Snare snare = new Snare("Snare", "Snake Charmer", 70, 100);
+        Snare snare2 = new Snare("Snare", "Hash Crash Snare", 70, 100);
+        TomTomDrum tomTomDrum = new TomTomDrum("Tom Tom Drum", "Tom Tom Forever",70, 150);
+        TomTomDrum tomTomDrum2 = new TomTomDrum("Tom Tom Drum", "Tama Xtreme", 70, 150);
         DrumStick drumStick = new DrumStick("Drum Stick", 10, 20);
         DrumKit drumKit = new DrumKit("Drum Kit", "Oak", "Blue", Type.PERCUSSION, "Tama", "Tiger Mark 7", drumStick);
 
@@ -57,6 +55,7 @@ public class Runner {
         shop.addStock(keyBoard);
         shop.addStock(keyBoard2);
         shop.addStock(bassDrum2);
+        shop.addStock(bassDrum1);
         shop.addStock(snare2);
         shop.addStock(tomTomDrum2);
         shop.addStock(cymbal2);
@@ -122,7 +121,8 @@ public class Runner {
                     do {
                         System.out.println("Choose and instrument to add or press q to go back\n");
                         System.out.println("1. Guitar\n" +
-                                            "2. Keyboard");
+                                            "2. Keyboard\n" +
+                                            "3. Drum Kit\n");
                         choice2 = scanner.nextLine();
                             switch (choice2){
                                 case "1":
@@ -176,6 +176,30 @@ public class Runner {
                                     KeyBoard newKeyboard = new KeyBoard("Keyboard", materialK, colourK, Type.KEYBOARD, makeK, modelK, keysK, buyPriceK, sellPriceK);
                                     shop.addStock(newKeyboard);
                                     System.out.println(newKeyboard.prettyName() + " added to stock\n");
+                                    break;
+
+                                case "3":
+                                    System.out.println("What is the make of drum kit?");
+                                    String makeD = scanner.nextLine();
+                                    System.out.println("What is the model?");
+                                    String modelD = scanner.nextLine();
+                                    System.out.println("What is the drum kit made of?");
+                                    String materialD = scanner.nextLine();
+                                    System.out.println("What colour is the drum kit");
+                                    String colourD = scanner.nextLine();
+                                    DrumStick newDrumStick = new DrumStick("Drumstick",10, 20);
+                                    DrumKit newDrumKit = new DrumKit("Drum Kit", materialD, colourD, Type.PERCUSSION, makeD, modelD, newDrumStick);
+                                    System.out.println("Number of drums to add to drum kit: ");
+                                    Integer numberOfDrums = Integer.parseInt(scanner.nextLine());
+                                      for (int i = 1; i <= numberOfDrums; i++){
+                                          System.out.println(shop.listAllIDrum() + "\n");
+                                          System.out.println("Select drum number " + i + " by typing the name");
+                                          String selectedDrum = scanner.nextLine();
+                                          newDrumKit.addDrum(shop.selectIDrum(selectedDrum));
+                                          shop.removeStock(((ISell) shop.selectIDrum(selectedDrum)));
+                                      }
+                                      shop.addStock(newDrumKit);
+                                    System.out.println(newDrumKit.prettyName() + " added to stock\n");
                                     break;
                             }
 

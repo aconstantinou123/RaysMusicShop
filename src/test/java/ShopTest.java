@@ -121,6 +121,14 @@ public class ShopTest {
     }
 
     @Test
+    public void canResetPrices() {
+       bassDrum.adjustSellPrice(50);
+       assertEquals(137.5, bassDrum.getSellPrice(), 0.1);
+       bassDrum.resetPrice(50);
+        assertEquals(275, bassDrum.getSellPrice(), 0.1);
+    }
+
+    @Test
     public void canCalculateTotalProfit(){
         shop.addStock(guitar);
         shop.addStock(drumKit);

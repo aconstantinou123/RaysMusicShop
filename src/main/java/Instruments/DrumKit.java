@@ -78,4 +78,12 @@ public class DrumKit extends Instrument implements ISell, IPlay{
         }
         drumStick.adjustSellPrice(percent);
     }
+
+    public void resetPrice(double percent) {
+        for (IDrum drum : drums){
+            double price = drum.getSellPrice() / (percent / 100);
+            drum.setSellPrice(Math.round(price));
+        }
+        drumStick.adjustSellPrice(percent);
+    }
 }

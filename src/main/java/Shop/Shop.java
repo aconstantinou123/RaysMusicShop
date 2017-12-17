@@ -149,6 +149,12 @@ public class Shop {
         }
     }
 
+    public void resetAllPrices(double percent){
+        for (ISell items : stock){
+            items.resetPrice(percent);
+        }
+    }
+
     public IDrum selectIDrum(String nameOfDrum){
         IDrum drum = null;
         for (ISell item : stock){

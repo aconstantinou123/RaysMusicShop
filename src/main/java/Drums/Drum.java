@@ -45,4 +45,8 @@ public abstract class Drum {
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
     }
+
+    public void resetPrice(double percent) {
+        this.setSellPrice(this.getSellPrice() / (percent / 100));
+    }
 }

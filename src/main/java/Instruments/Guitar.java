@@ -81,4 +81,9 @@ public class Guitar extends Instrument implements ISell, IPlay {
        guitarString.adjustSellPrice(percent);
        this.sellPrice = sellPrice * (percent / 100);
     }
+
+    public void resetPrice(double percent){
+        guitarString.adjustSellPrice(percent);
+        this.sellPrice = Math.round(sellPrice / (percent / 100));
+    }
 }

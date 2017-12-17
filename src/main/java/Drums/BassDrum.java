@@ -14,7 +14,11 @@ public class BassDrum extends Drum implements IDrum, ISell {
     }
 
     public void adjustSellPrice(double percent) {
-        this.setSellPrice(this.getSellPrice() * (percent / 100));
+        this.setSellPrice(Math.round(this.getSellPrice() * (percent / 100)));
+    }
+
+    public void resetPrice(double percent) {
+        this.setSellPrice(this.getSellPrice() / (percent / 100));
     }
 
     public String prettyName() {

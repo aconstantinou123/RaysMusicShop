@@ -16,6 +16,10 @@ public class Cymbal extends Drum implements IDrum, ISell{
         this.setSellPrice(this.getSellPrice() * (percent / 100));
     }
 
+    public void resetPrice(double percent) {
+        this.setSellPrice(Math.round(this.getSellPrice() * (percent / 100)));
+    }
+
     public String prettyName() {
         return getDisplayName();
     }

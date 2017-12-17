@@ -54,4 +54,9 @@ public class KeyBoard extends Instrument implements ISell, IPlay{
     public void adjustSellPrice(double percent) {
         this.sellPrice = this.sellPrice * (percent / 100);
     }
+
+    public void resetPrice(double percent) {
+        this.sellPrice = Math.round(this.sellPrice / (percent / 100));
+    }
+
 }

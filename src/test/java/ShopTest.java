@@ -87,7 +87,7 @@ public class ShopTest {
     @Test
     public void canAdjustSellPrice(){
         bassDrum.adjustSellPrice(10);
-        assertEquals(27.5,bassDrum.getSellPrice(), 0.1);
+        assertEquals(28,bassDrum.getSellPrice(), 0.1);
     }
 
     @Test
@@ -123,9 +123,9 @@ public class ShopTest {
     @Test
     public void canResetPrices() {
        bassDrum.adjustSellPrice(50);
-       assertEquals(137.5, bassDrum.getSellPrice(), 0.1);
+       assertEquals(138, bassDrum.getSellPrice(), 0.1);
        bassDrum.resetPrice(50);
-        assertEquals(275, bassDrum.getSellPrice(), 0.1);
+        assertEquals(276, bassDrum.getSellPrice(), 0.1);
     }
 
     @Test

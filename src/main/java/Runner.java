@@ -76,10 +76,8 @@ public class Runner {
                             "2. List by type\n" +
                             "3. Search for products\n" +
                             "4. Financial Totals\n" +
-                            "5. Apply Sale Prices\n" +
-                            "6. Reset Prices\n" +
-                            "7. Remove stock\n" +
-                            "8. Add stock\n");
+                            "5. Remove stock\n" +
+                            "6. Add stock\n");
             choice = scanner.nextLine();
             switch (choice){
                 case "1":
@@ -120,31 +118,31 @@ public class Runner {
                     }while (!choice2.equals("q"));
                     break;
 
-                case "5":
-                    do {
-                        System.out.println("Type the percent you wish to reduce prices to: ");
-                        Double percent = Double.parseDouble(scanner.nextLine());
-                        shop.applySalePrices(percent);
-                        System.out.println("Prices adjusted to " + percent + "%");
-                        System.out.println(shop.listAllStock() + "\n");
-                        System.out.println("press q to quit back to the main menu");
-                        choice2 = scanner.nextLine();
-                    }while (!choice2.equals("q"));
-                    break;
+//                case "5":
+//                    do {
+//                        System.out.println("Type the percent you wish to reduce prices to: ");
+//                        Double percent = Double.parseDouble(scanner.nextLine());
+//                        shop.applySalePrices(percent);
+//                        System.out.println("Prices adjusted to " + percent + "%");
+//                        System.out.println(shop.listAllStock() + "\n");
+//                        System.out.println("press q to quit back to the main menu");
+//                        choice2 = scanner.nextLine();
+//                    }while (!choice2.equals("q"));
+//                    break;
+//
+//                case "6":
+//                    do {
+//                        System.out.println("Type in current sale % and the computer will calculate the original prices");
+//                        Double percent = Double.parseDouble(scanner.nextLine());
+//                        shop.resetAllPrices(percent);
+//                        System.out.println("Prices reset");
+//                        System.out.println(shop.listAllStock() + "\n");
+//                        System.out.println("press q to quit back to the main menu");
+//                        choice2 = scanner.nextLine();
+//                    }while (!choice2.equals("q"));
+//                    break;
 
-                case "6":
-                    do {
-                        System.out.println("Type in current sale % and the computer will calculate the original prices");
-                        Double percent = Double.parseDouble(scanner.nextLine());
-                        shop.resetAllPrices(percent);
-                        System.out.println("Prices reset");
-                        System.out.println(shop.listAllStock() + "\n");
-                        System.out.println("press q to quit back to the main menu");
-                        choice2 = scanner.nextLine();
-                    }while (!choice2.equals("q"));
-                    break;
-
-                case"7":
+                case"5":
                     System.out.println(shop.listAllStock() + "\n");
                     System.out.println("Type the name of the items you wish to remove");
                     String itemToRemove = scanner.nextLine();
@@ -152,7 +150,7 @@ public class Runner {
                     System.out.println(itemToRemove + " removed from stock");
                     break;
 
-                case "8":
+                case "6":
                     do {
                         System.out.println("Choose and instrument to add or press q to go back\n");
                         System.out.println("1. Guitar\n" +

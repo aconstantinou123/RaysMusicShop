@@ -66,7 +66,7 @@ public class Guitar extends Instrument implements ISell, IPlay {
     }
 
     public double getSellPrice(){
-        return sellPrice += guitarString.getSellPrice();
+        return sellPrice + guitarString.getSellPrice();
     }
 
     public String play() {
